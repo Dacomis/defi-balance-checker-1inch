@@ -54,10 +54,12 @@ const Balances: FC<BalancesProps> = ({ walletAddress, setWalletAddress }) => {
     );
 
     try {
-      const balances = await ETH_CLIENT.multicall({
+      // @ts-ignore
+      // I cannot seem to resolve this viem type error
+      const balances = await (ETH_CLIENT.multicall({
         contracts: balanceCalls,
         allowFailure: false,
-      });
+      }) as any);
 
       const allowances = await ETH_CLIENT.multicall({
         contracts: allowanceCalls,

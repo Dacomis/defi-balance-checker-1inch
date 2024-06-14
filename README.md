@@ -17,3 +17,9 @@ You will also see any lint errors in the console.
 ### `yarn format`
 
 To format the files.
+
+
+## IMPORTANT NOTICE
+To use this project you need a local variable similar to:
+
+MAINNET_RPC_URL=https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}
